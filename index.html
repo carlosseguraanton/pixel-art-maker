@@ -36,32 +36,30 @@
         <button type="button" id="clearGrid" value="Clear"
             title="Clears the colors from the grid so you can start over">Clear</button>
 
+        <h2>Pick a Color:</h2>
+
+        <input type="color" id="colorPicker" value="#ff0000" title="Set PAINT color">
+
+        <h2>Mode:</h2>
+
+        <span id="modeDisplay">PAINT</span>
+
+        <div id="mode">
+
+            <button id="paintBtn" title="Set mode to PAINT" type="button">paint</button>
+            <button id="eraseBtn" title="Set mode to ERASE" type="button">erase</button>
+
+        </div>
+
+        <!--end mode div: for mode button listener -->
+
+        <h2>Design Canvas</h2>
+
+        <table id="pixelCanvas"></table>
+
+        <p id="legend">Click to paint or erase. Left mouse button for multi-tile action</p>
+
     </form>
-
-    <h2>Pick a Color:</h2>
-
-    <input type="color" id="colorPicker" value="#ff0000" title="Set PAINT color">
-
-    <br>
-
-    <h2>Mode:</h2>
-
-    <span id="modeDisplay">PAINT</span>
-
-    <div id="mode">
-
-        <button id="paintBtn" title="Set mode to PAINT" type="button">paint</button>
-        <button id="eraseBtn" title="Set mode to ERASE" type="button">erase</button>
-
-    </div>
-
-    <!--end mode div: for mode button listener -->
-
-    <h2>Design Canvas</h2>
-
-    <table id="pixelCanvas"></table>
-
-    <p id="legend">Click to paint or erase. Left mouse button for multi-tile action</p>
 
     <script src="designs.js"></script>
 

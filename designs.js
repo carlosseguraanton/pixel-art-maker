@@ -11,11 +11,15 @@ const ERASE = 'ERASE';
 const theGridSize = document.forms.gridSize;
 
 const userColor = document.getElementById('colorPicker');
+
 const tileMode = document.getElementById('modeDisplay');
+
 const displayHeight = document.getElementById('gridHeightDisplay');
 const displayWidth = document.getElementById('gridWidthDisplay');
+
 const userHeight = document.getElementById('inputHeight');
 const userWidth = document.getElementById('inputWidth');
+
 const grid = document.getElementById('pixelCanvas');
 
 let gridTileMode = PAINT // controls paint or erase of grid cells (td's)
@@ -56,6 +60,7 @@ theGridSize.submitGrid.onclick = function makeGrid(e) {
         }
 
         tableRows += '</tr>';
+
         r += 1;
 
     }
@@ -127,7 +132,7 @@ function paintEraseTiles(targetCell) {
         console.log("Nice try: " + targetCell.nodeName + " talk to the hand!");
 
     }
-    
+
 }
 
 // Display how many cells high the grid will be
