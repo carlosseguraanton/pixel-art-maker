@@ -1,43 +1,18 @@
-/* Base css */
-
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
   text-align: center;
-}
-
-/* The grid classes are used for css grid layout.*/
-
-.gridControl {
-  grid-area: control;
-  background-color: gray;
-}
-
-.gridCanvas {
-  grid-area: canvas;
-  background-color: gray;
-}
-
-table,
-tr,
-td {
-  border: 1px solid black;
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 table {
-  border-collapse: collapse;
   margin-right: auto;
   margin-left: auto;
-}
-
-tr {
-  height: 16px;
+  border-collapse: collapse;
 }
 
 td {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 1px solid black;
+  cursor: pointer;
 }
