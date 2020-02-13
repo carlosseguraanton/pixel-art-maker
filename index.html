@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="icon" type="image/png" href="imagen_32.png" sizes="32x32">
+
     <meta charset="utf-8">
 
 </head>
@@ -20,48 +22,50 @@
 
     <form id="sizePicker" name="gridSize">
 
-        <span>Grid Height:</span>
-        <span id="gridHeightDisplay">16</span>
+        <div>
 
-        <input type="range" id="inputHeight" title="Set grid height" name="height" min="4" max="64" value="16">
-
-        <span>Grid Width:</span>
-        <span id="gridWidthDisplay">16</span>
-
-        <input type="range" id="inputWidth" title="Set grid width" name="width" min="4" max="64" value="16">
-
-        <input type="submit" id="createGrid" value="Create Grid" name="submitGrid"
-            title="Makes a grid of tiles using the values above">
-
-        <button type="button" id="clearGrid" value="Clear"
-            title="Clears the colors from the grid so you can start over">Clear</button>
-
-        <h2>Pick a Color:</h2>
-
-        <input type="color" id="colorPicker" value="#ff0000" title="Set PAINT color">
-
-        <h2>Mode:</h2>
-
-        <span id="modeDisplay">PAINT</span>
-
-        <div id="mode">
-
-            <button id="paintBtn" title="Set mode to PAINT" type="button">paint</button>
-            <button id="eraseBtn" title="Set mode to ERASE" type="button">erase</button>
+            <span>Grid Height:</span>
+            <span id="gridHeightDisplay">16</span>
+            <input type="range" id="inputHeight" name="height" min="4" max="64" value="16">
 
         </div>
 
-        <!--end mode div: for mode button listener -->
+        <div>
+
+            <span>Grid Width:</span>
+            <span id="gridWidthDisplay">16</span>
+            <input type="range" id="inputWidth" name="width" min="4" max="64" value="16">
+
+        </div>
+
+        <input type="submit" id="createGrid" value="Create Grid" name="submitGrid">
+        <
+            button type="button" id="clearGrid">Clear</button>
+
+        <h2>Pick a Color:</h2>
+
+        <input type="color" id="color" value="#ff0000">
+
+        <h2>Mode:</h2>
+
+        <span id="modeDisplay">paint</span>
+
+        <div id="mode">
+
+            <button id="paintBtn" type="button">Paint</button>
+            <button id="eraseBtn" type="button">Erase</button>
+
+        </div>
 
         <h2>Design Canvas</h2>
 
-        <table id="pixelCanvas"></table>
-
-        <p id="legend">Click to paint or erase. Left mouse button for multi-tile action</p>
+        <table id="table">
+            
+        </table>
 
     </form>
 
-    <script src="designs.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
