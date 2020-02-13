@@ -23,23 +23,19 @@
     <form id="sizePicker" name="gridSize">
 
         <div>
-
             <span>Grid Height:</span>
             <span id="gridHeightDisplay">16</span>
-            <input type="range" id="inputHeight" name="height" min="4" max="64" value="16">
-
+            <input type="range" id="inputHeight" name="height" min="2" max="64" value="16">
         </div>
 
         <div>
-
             <span>Grid Width:</span>
             <span id="gridWidthDisplay">16</span>
-            <input type="range" id="inputWidth" name="width" min="4" max="64" value="16">
-
+            <input type="range" id="inputWidth" name="width" min="2" max="64" value="16">
         </div>
 
         <input type="submit" id="createGrid" value="Create Grid" name="submitGrid">
-        <button type="button" id="clearGrid">Clear</button>
+        <input type="button" value="Clear" id="clearGrid">
 
         <h2>Pick a Color:</h2>
 
@@ -50,10 +46,8 @@
         <span id="modeDisplay">paint</span>
 
         <div id="mode">
-
             <button id="paintBtn" type="button">Paint</button>
             <button id="eraseBtn" type="button">Erase</button>
-
         </div>
 
         <h2>Design Canvas</h2>

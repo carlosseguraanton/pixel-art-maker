@@ -1,3 +1,4 @@
+
 const theGridSize = document.forms.gridSize;
 
 const color = document.getElementById('color');
@@ -10,22 +11,23 @@ const displayWidth = document.getElementById('gridWidthDisplay');
 const userHeight = document.getElementById('inputHeight');
 const userWidth = document.getElementById('inputWidth');
 
-const grid = document.getElementById('table');
+const table = document.getElementById('table');
 
-let gridTileModeTD = 'paint';
+let gridTileModeTableData_TD = 'paint';
 
 theGridSize.submitGrid.onclick = function makeGrid(e) {
 
     e.preventDefault();
-    
+
     let mouseIsDown = false;
 
     const rows = userHeight.value;
     const columns = userWidth.value;
 
-    while (grid.hasChildNodes()) {
+    // delete any previous table rows
+    while (table.hasChildNodes()) {
 
-        grid.removeChild(grid.lastChild); // delete any previous table rows
+        table.removeChild(table.lastChild);
 
     }
 
@@ -49,9 +51,9 @@ theGridSize.submitGrid.onclick = function makeGrid(e) {
 
     }
 
-    grid.insertAdjacentHTML('afterbegin', tableRows);
+    table.insertAdjacentHTML('afterbegin', tableRows);
 
-    grid.addEventListener("click", function (e) {
+    table.addEventListener("click", function (e) {
 
         e.preventDefault();
 
@@ -59,7 +61,7 @@ theGridSize.submitGrid.onclick = function makeGrid(e) {
 
     });
 
-    grid.addEventListener('mousedown', function (e) {
+    table.addEventListener('mousedown', function (e) {
 
         e.preventDefault();
 
@@ -75,7 +77,7 @@ theGridSize.submitGrid.onclick = function makeGrid(e) {
 
     });
 
-    grid.addEventListener('mouseover', function (e) {
+    table.addEventListener('mouseover', function (e) {
 
         e.preventDefault();
 
@@ -93,7 +95,7 @@ function paintOrEraseTiles(targetCell) {
 
     if (targetCell.nodeName === 'TD') {
 
-        targetCell.style.backgroundColor = gridTileModeTD === 'paint' ? color.value : 'transparent';
+        targetCell.style.backgroundColor = gridTileModeTableData_TD === 'paint' ? color.value : 'transparent';
 
     } else {
 
@@ -118,15 +120,15 @@ theGridSize.width.oninput = function () {
 
 color.oninput = function () {
 
-    gridTileModeTD = 'paint';
+    gridTileModeTableData_TD = 'paint';
 
-    tileMode.innerHTML = gridTileModeTD;
+    tileMode.innerHTML = gridTileModeTableData_TD;
 
 };
 
 document.getElementById('clearGrid').addEventListener('click', function () {
 
-    let tiles = grid.getElementsByTagName('td');
+    let tiles = table.getElementsByTagName('td');
 
     for (let i = 0; i <= tiles.length; i++) {
 
@@ -138,8 +140,10 @@ document.getElementById('clearGrid').addEventListener('click', function () {
 
 document.getElementById('mode').addEventListener('click', function (e) {
 
-    gridTileModeTD = e.target.className.indexOf('paint') >= 0 ? 'paint' : 'erase';
+    gridTileModeTableData_TD = e.target.className.indexOf('paint') >= 0 ? 'paint' : 'erase';
 
-    tileMode.innerHTML = gridTileModeTD;
+    tileMode.innerHTML = gridTileModeTableData_TD;
 
 });
+
+
